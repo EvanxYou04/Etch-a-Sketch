@@ -21,6 +21,7 @@
 .flex-center button { 
     flex: auto;
     margin:2px;
+    margin-bottom: 2rem;
     max-width: 3em;
 }
 .canvas-container {
