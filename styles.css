@@ -18,14 +18,10 @@
     justify-content: center;
     align-items: center;
 }
-.flex {
-    display: flex;
-}
-.flex button { 
+.flex-center button { 
     flex: auto;
     margin:2px;
     max-width: 3em;
-    margin-left: auto;
 }
 .canvas-container {
     display: grid;
@@ -33,9 +29,8 @@
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     height: 75vh;
     width: 75vh;
-    background-color: #121212;
     margin: 4rem 4rem;
-    border: .5rem solid red;
+    border: 1rem solid #222831;
     border-radius: 6px;
 }
 .grid-item {

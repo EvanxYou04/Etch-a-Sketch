@@ -10,6 +10,10 @@ function green() {
     console.log("green");
 }
 
+function clear() {
+    console.log('clear');
+}
+
 const container = document.querySelector(".canvas-container");
 
 function makeRows(rows, cols) {
@@ -22,4 +26,4 @@ function makeRows(rows, cols) {
     };
   };
   
-  makeRows(4,4);
+  makeRows(2,2);
