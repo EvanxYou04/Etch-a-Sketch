@@ -1,4 +1,4 @@
-console.log("hello world");
+const size = 2;
 let paint = "#ffffff"; // default color
 function red() {
   paint = "#ff0000";
@@ -17,10 +17,10 @@ function clear() {
 
 const container = document.querySelector(".canvas-container");
 
-function makeRows(rows, cols) {
-  container.style.setProperty("--grid-rows", rows);
-  container.style.setProperty("--grid-cols", cols);
-  for (c = 0; c < rows * cols; c++) {
+function makeRows(sideLen) {
+  container.style.setProperty("--grid-rows", sideLen);
+  container.style.setProperty("--grid-cols", sideLen);
+  for (c = 0; c < sideLen * sideLen; c++) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "grid-item";
     cell.addEventListener("mousedown", (e) => {
@@ -29,4 +29,4 @@ function makeRows(rows, cols) {
   }
 }
 
-makeRows(2, 2);
+makeGrid(2);
