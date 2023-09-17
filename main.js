@@ -1,13 +1,13 @@
 console.log("hello world");
 let paint = "#ffffff"; // default color
 function red() {
-  console.log("red");
+  paint = "#ff0000";
 }
 function blue() {
-  console.log("blue");
+  paint = "#00ff00";
 }
 function green() {
-  console.log("green");
+  paint = "#0000ff";
 }
 
 function clear() {
