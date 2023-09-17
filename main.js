@@ -2,12 +2,13 @@ console.log("hello world");
 let paint = "#ffffff"; // default color
 function red() {
   paint = "#ff0000";
+  console.log(paint);
 }
 function blue() {
-  paint = "#00ff00";
+  paint = "#0000ff";
 }
 function green() {
-  paint = "#0000ff";
+  paint = "#00ff00";
 }
 
 function clear() {
@@ -21,8 +22,10 @@ function makeRows(rows, cols) {
   container.style.setProperty("--grid-cols", cols);
   for (c = 0; c < rows * cols; c++) {
     let cell = document.createElement("div");
-    cell.innerText = c + 1;
     container.appendChild(cell).className = "grid-item";
+    cell.addEventListener("mousedown", (e) => {
+      e.target.style.backgroundColor = paint;
+    });
   }
 }
 
