@@ -12,7 +12,7 @@ function green() {
 }
 
 function clear() {
-  console.log("clear");
+  paint = "#ffffff";
 }
 
 const container = document.querySelector(".canvas-container");
@@ -28,6 +28,12 @@ function makeGrid(sideLen) {
   }
 }
 
+const colorPicker = document.querySelector("#colorPicker");
+colorPicker.addEventListener("change", updatePaint);
+function updatePaint(e) {
+  paint = e.target.value;
+  console.log(paint);
+}
 function changeColor(e) {
   e.target.style.backgroundColor = paint;
 }
