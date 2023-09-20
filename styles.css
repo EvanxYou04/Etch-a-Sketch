@@ -36,16 +36,26 @@ input[type='color']:hover {
     text-align: center;
     color: #7d7c7c;
 }
-.flex-center {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
-.flex-center button {
-    flex: auto;
-    margin: 2px;
-    margin-bottom: 2rem;
-    max-width: 3em;
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+button {
+    padding: 10px 20px;
+    border: 1px solid #7d7c7c;
+    border-radius: 6px;
+}
+button:hover {
+    transform: scale(1.05);
+    color: #f1efef;
+    background-color: #333;
 }
 .canvas-container {
     display: grid;
@@ -58,7 +68,5 @@ input[type='color']:hover {
     border-radius: 6px;
 }
 .grid-item {
-    padding: 1px;
-    /* border: 1px solid #ddd; */
-    text-align: center;
+    gap: 0px;
 }
